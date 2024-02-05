@@ -19,12 +19,12 @@ export async function configure(_command: ConfigureCommand) {
   const codemods = await _command.createCodemods()
 
   // Create config file
-  await codemods.makeUsingStub(stubsRoot, 'config', {})
+  await codemods.makeUsingStub(stubsRoot, 'config/mongoose.stub', {})
 
   // Add service to rc file
   try {
     await codemods.updateRcFile((rcFile) => {
-      rcFile.addProvider('@benhepburn/adonis-mongoose/provider')
+      rcFile.addProvider('@benhepburn/adonis-mongoose/mongoose_provider')
     })
   } catch (error) {
     console.error('Unable to update adonisrc.ts file')
@@ -33,6 +33,10 @@ export async function configure(_command: ConfigureCommand) {
 
   // Add env validations
   try {
+    await codemods.defineEnvVariables({
+      MONGODB_URI: '',
+    })
+
     await codemods.defineEnvValidations({
       leadingComment: 'Mongoose environment variables',
       variables: {
@@ -40,7 +44,7 @@ export async function configure(_command: ConfigureCommand) {
       },
     })
   } catch (error) {
-    console.error('Unable to define env validations')
+    console.error('Unable to define env variables/validations')
     console.error(error)
   }
 }

@@ -67,11 +67,11 @@ export default class MongooseProvider {
     const mongoOptions = mongoConfig.mongodb.options
 
     if (useDefault) {
-      mongoose.connect(mongoUri.toString(), mongoOptions)
+      mongoose.connect(mongoUri, mongoOptions)
 
       return mongoose.connection
     } else {
-      return mongoose.createConnection(mongoUri.toString(), mongoOptions)
+      return mongoose.createConnection(mongoUri, mongoOptions)
     }
   }
 }

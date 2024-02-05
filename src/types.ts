@@ -1,9 +1,8 @@
-import { Secret } from '@adonisjs/core/helpers'
 import { ConnectOptions, default as mongoose } from 'mongoose'
 
 export type MongoDbConfig = {
   useDefaultConnection: boolean
-  uri: Secret<string>
+  uri: string
   options: ConnectOptions
 }
 
