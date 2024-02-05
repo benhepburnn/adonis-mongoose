@@ -15,8 +15,7 @@
   "exports": {
     ".": "./build/index.js",
     "./types": "./build/src/types.js",
-    "./mongoose_provider": "./build/providers/mongoose_provider.js",
-    "./services/mongoose": "./build/services/mongoose.js"
+    "./mongoose_provider": "./build/providers/mongoose_provider.js"
   },
   "scripts": {
     "clean": "del-cli build",
