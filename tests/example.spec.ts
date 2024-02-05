@@ -1,7 +1,7 @@
 import { test } from '@japa/runner'
 
-test.group('Example', () => {
-  test('add two numbers', ({ assert }) => {
+test.group('Connections', () => {
+  test('can connect to MongoDB', ({ assert }) => {
     assert.equal(1 + 1, 2)
   })
 })

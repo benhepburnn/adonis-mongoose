@@ -1,3 +1,3 @@
-import { MongooseConfig } from "./types.js";
+import { MongooseConfig } from './types.js'
 
-export declare function defineConfig(config: MongooseConfig): MongooseConfig;
+export declare function defineConfig(config: MongooseConfig): MongooseConfig
