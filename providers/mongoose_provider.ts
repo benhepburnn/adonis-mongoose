@@ -75,3 +75,9 @@ export default class MongooseProvider {
     }
   }
 }
+
+declare module '@adonisjs/core/types' {
+  interface ContainerBindings {
+    mongoose: typeof mongoose
+  }
+}

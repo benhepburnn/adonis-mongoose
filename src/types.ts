@@ -1,4 +1,4 @@
-import { ConnectOptions, default as mongoose } from 'mongoose'
+import { ConnectOptions } from 'mongoose'
 
 export type MongoDbConfig = {
   useDefaultConnection: boolean
@@ -8,10 +8,4 @@ export type MongoDbConfig = {
 
 export type MongooseConfig = {
   mongodb: MongoDbConfig
-}
-
-declare module '@adonisjs/core/types' {
-  interface ContainerBindings {
-    mongoose: typeof mongoose
-  }
 }
