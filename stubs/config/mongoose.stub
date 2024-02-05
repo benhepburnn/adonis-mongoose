@@ -11,10 +11,10 @@ import { defineConfig } from '@benhepburn/adonis-mongoose'
  */
 const mongooseConfig = defineConfig({
   mongodb: {
-    useDefaultConnection: true,               // Whether to use Mongoose's default connection
-    uri: env.get('MONGODB_URI'),  // The MongoDB URI used to connect to the database
-    options: {}                               // See https://mongoosejs.com/docs/connections.html#options
-  }
+    useDefaultConnection: true, // Whether to use Mongoose's default connection
+    uri: env.get('MONGODB_URI'), // The MongoDB URI used to connect to the database
+    options: {}, // See https://mongoosejs.com/docs/connections.html#options
+  },
 })
 
 export default mongooseConfig
