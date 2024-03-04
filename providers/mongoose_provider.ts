@@ -62,7 +62,7 @@ export default class MongooseProvider {
     const mongoConfig = this.app.config.get('mongoose') as MongooseConfig
 
     // Register bindings
-    const useDefault = !mongoConfig.mongodb.useDefaultConnection
+    const useDefault = mongoConfig.mongodb.useDefaultConnection
     const mongoUri = mongoConfig.mongodb.uri
     const mongoOptions = mongoConfig.mongodb.options
 
