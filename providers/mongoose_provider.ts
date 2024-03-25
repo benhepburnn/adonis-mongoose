@@ -39,9 +39,10 @@ export default class MongooseProvider {
     const mongooseService = await this.app.container.make('mongoose')
     const conn: Connection = mongooseService.connection
     const logger = await this.app.container.make('logger')
+    const config = this.app.config.get('mongoose') as MongooseConfig
     try {
       await conn.asPromise()
-      logger.debug('Connected to MongoDB')
+      if (config.syncIndexesOnStart) await conn.syncIndexes()
     } catch (err) {
       logger.error(`MongoDb Error: ${err}`)
     }

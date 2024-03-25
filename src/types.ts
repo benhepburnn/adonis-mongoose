@@ -8,4 +8,5 @@ export type MongoDbConfig = {
 
 export type MongooseConfig = {
   mongodb: MongoDbConfig
+  syncIndexesOnStart: boolean
 }
