@@ -4,35 +4,21 @@ This package creates a Mongoose service for use in AdonisJS applications.
 
 ## Install
 
-Install mongoose from npm:
+Install mongoose and this package from npm:
 ```sh
-npm install mongoose
+npm install mongoose @benhepburn/adonis-mongoose
 ```
 or
 ```sh
-pnpm install mongoose
+pnpm install mongoose @benhepburn/adonis-mongoose
 ```
 or
 ```sh
-yarn add mongoose
+yarn add mongoose @benhepburn/adonis-mongoose
 ```
 <br />
 
-Then, install the package:
-```sh
-npm install @benhepburn/adonis-mongoose
-```
-or
-```sh
-pnpm install @benhepburn/adonis-mongoose
-```
-or
-```sh
-yarn add @benhepburn/adonis-mongoose
-```
-<br />
-
-Finally, configure the package for Adonis:
+Then configure the package for Adonis:
 ```sh
 node ace configure @benhepburn/adonis-mongoose
 ```
