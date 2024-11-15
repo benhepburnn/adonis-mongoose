@@ -29,12 +29,7 @@ export default class MongooseProvider {
   /**
    * The application has been booted
    */
-  async start() {}
-
-  /**
-   * The process has been started
-   */
-  async ready() {
+  async start() {
     // Connect to MongoDb
     const mongooseService = await this.app.container.make('mongoose')
     const conn: Connection = mongooseService.connection
@@ -46,6 +41,11 @@ export default class MongooseProvider {
       logger.error(`MongoDb Error: ${err}`)
     }
   }
+
+  /**
+   * The process has been started
+   */
+  async ready() {}
 
   /**
    * Preparing to shutdown the app
